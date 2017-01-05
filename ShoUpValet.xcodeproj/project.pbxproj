@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB569501E1EDF3800B422F9 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5694F1E1EDF3800B422F9 /* DBConnection.swift */; };
 		979AC52B1E1ECB87000771B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AC52A1E1ECB87000771B2 /* AppDelegate.swift */; };
 		979AC52D1E1ECB87000771B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AC52C1E1ECB87000771B2 /* ViewController.swift */; };
 		979AC5301E1ECB87000771B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979AC52E1E1ECB87000771B2 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AB5694F1E1EDF3800B422F9 /* DBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBConnection.swift; path = ShoUpValet/DBConnection.swift; sourceTree = "<group>"; };
 		979AC5271E1ECB87000771B2 /* ShoUpValet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoUpValet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979AC52A1E1ECB87000771B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		979AC52C1E1ECB87000771B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AB569511E1EDF7900B422F9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0AB5694F1E1EDF3800B422F9 /* DBConnection.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		979AC51E1E1ECB87000771B2 = {
 			isa = PBXGroup;
 			children = (
+				0AB569511E1EDF7900B422F9 /* Classes */,
 				979AC5291E1ECB87000771B2 /* ShoUpValet */,
 				979AC5411E1ECB87000771B2 /* ShoUpValetTests */,
 				979AC5281E1ECB87000771B2 /* Products */,
@@ -205,6 +216,7 @@
 				979AC52D1E1ECB87000771B2 /* ViewController.swift in Sources */,
 				979AC52B1E1ECB87000771B2 /* AppDelegate.swift in Sources */,
 				979AC5331E1ECB87000771B2 /* ShoUpValet.xcdatamodeld in Sources */,
+				0AB569501E1EDF3800B422F9 /* DBConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +422,7 @@
 				979AC5491E1ECB87000771B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		979AC54A1E1ECB87000771B2 /* Build configuration list for PBXNativeTarget "ShoUpValetTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +431,7 @@
 				979AC54C1E1ECB87000771B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
