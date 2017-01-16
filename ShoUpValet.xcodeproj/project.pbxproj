@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0AB569501E1EDF3800B422F9 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5694F1E1EDF3800B422F9 /* DBConnection.swift */; };
+		7006FF9A1E2D7502002B44ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006FF991E2D7502002B44ED /* MainViewController.swift */; };
+		7006FF9C1E2D830F002B44ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006FF9B1E2D830F002B44ED /* LoginViewController.swift */; };
 		979AC52B1E1ECB87000771B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AC52A1E1ECB87000771B2 /* AppDelegate.swift */; };
-		979AC52D1E1ECB87000771B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979AC52C1E1ECB87000771B2 /* ViewController.swift */; };
 		979AC5301E1ECB87000771B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979AC52E1E1ECB87000771B2 /* Main.storyboard */; };
 		979AC5331E1ECB87000771B2 /* ShoUpValet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 979AC5311E1ECB87000771B2 /* ShoUpValet.xcdatamodeld */; };
 		979AC5351E1ECB87000771B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979AC5341E1ECB87000771B2 /* Assets.xcassets */; };
@@ -29,9 +30,10 @@
 
 /* Begin PBXFileReference section */
 		0AB5694F1E1EDF3800B422F9 /* DBConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBConnection.swift; path = ShoUpValet/DBConnection.swift; sourceTree = "<group>"; };
+		7006FF991E2D7502002B44ED /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7006FF9B1E2D830F002B44ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		979AC5271E1ECB87000771B2 /* ShoUpValet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoUpValet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		979AC52A1E1ECB87000771B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		979AC52C1E1ECB87000771B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		979AC52F1E1ECB87000771B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		979AC5321E1ECB87000771B2 /* ShoUpValet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoUpValet.xcdatamodel; sourceTree = "<group>"; };
 		979AC5341E1ECB87000771B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				979AC52A1E1ECB87000771B2 /* AppDelegate.swift */,
-				979AC52C1E1ECB87000771B2 /* ViewController.swift */,
+				7006FF991E2D7502002B44ED /* MainViewController.swift */,
+				7006FF9B1E2D830F002B44ED /* LoginViewController.swift */,
 				979AC52E1E1ECB87000771B2 /* Main.storyboard */,
 				979AC5341E1ECB87000771B2 /* Assets.xcassets */,
 				979AC5361E1ECB87000771B2 /* LaunchScreen.storyboard */,
@@ -214,10 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				979AC52D1E1ECB87000771B2 /* ViewController.swift in Sources */,
 				979AC52B1E1ECB87000771B2 /* AppDelegate.swift in Sources */,
 				979AC5331E1ECB87000771B2 /* ShoUpValet.xcdatamodeld in Sources */,
 				0AB569501E1EDF3800B422F9 /* DBConnection.swift in Sources */,
+				7006FF9C1E2D830F002B44ED /* LoginViewController.swift in Sources */,
+				7006FF9A1E2D7502002B44ED /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FQB2HAZ9GF;
 				INFOPLIST_FILE = ShoUpValet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "van-pham.ShoUpValet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FQB2HAZ9GF;
 				INFOPLIST_FILE = ShoUpValet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "van-pham.ShoUpValet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
