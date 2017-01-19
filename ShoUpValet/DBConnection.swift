@@ -55,11 +55,54 @@ class DBConnection {
             }
         })
         task.resume()
-
-
-
         
     }
+    
+    func insertUser(host: String, name: String, username: String, password: String, email: String, status: String, phone: String) {
+        
+        let myUrl = URL(string: host);
+
+        
+        var request = URLRequest(url:myUrl!)
+        
+        request.httpMethod = "POST"// Compose a query string
+        
+        let postString = "name=" + name + "&username=" + username + "&password=" + password + "&email=" + email + "&phone=" + phone + "&status=" + status;
+        
+        print(postString)
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        
+        
+        let session = URLSession.shared
+
+        
+        //create dataTask using the session object to send data to the server
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+            
+            guard error == nil else {
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                //create json object from data
+                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                    print(json)
+                    // handle json...
+                }
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        })
+        task.resume()
+    }
+    
+
     
     
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rVS-gk-Mjf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rVS-gk-Mjf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -120,7 +120,7 @@
         <!--Details-->
         <scene sceneID="bg5-Ns-sJ1">
             <objects>
-                <viewController id="QiS-ON-tNg" sceneMemberID="viewController">
+                <viewController id="QiS-ON-tNg" customClass="DetailsViewController" customModule="ShoUpValet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ccY-aO-UEL"/>
                         <viewControllerLayoutGuide type="bottom" id="9HB-Gz-zj0"/>
@@ -157,6 +157,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIN-DY-cqq">
+                                <rect key="frame" x="29" y="494" width="323" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnData:" destination="QiS-ON-tNg" eventType="touchUpInside" id="1rt-sg-gfb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -164,21 +172,27 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vTJ-4z-hPb"/>
                         <barButtonItem title="Next" id="KZT-Z1-yp3">
                             <connections>
-                                <segue destination="Qyb-kf-mdW" kind="show" id="hSW-2L-L5s"/>
+                                <segue destination="Qyb-kf-mdW" kind="show" identifier="passcodesegue" id="hSW-2L-L5s"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ggE-aN-eq0"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Details" id="qUW-cN-t0k"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="TN3-zG-unN" id="YL2-3P-ITG"/>
+                        <outlet property="txtName" destination="iTD-0X-Nla" id="HBe-jy-2Yv"/>
+                        <outlet property="txtPhone" destination="fvr-hf-WkK" id="Hos-dF-Kc0"/>
+                        <outlet property="txtUsername" destination="MwJ-7w-uDi" id="FPr-dW-fru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38d-KR-lVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="548"/>
+            <point key="canvasLocation" x="1568.8" y="547.37631184407803"/>
         </scene>
         <!--Passcode-->
         <scene sceneID="YFG-ik-6ab">
             <objects>
-                <viewController id="Qyb-kf-mdW" sceneMemberID="viewController">
+                <viewController id="Qyb-kf-mdW" customClass="RegisterViewController" customModule="ShoUpValet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="97M-nd-aR3"/>
                         <viewControllerLayoutGuide type="bottom" id="ezP-ye-IJS"/>
@@ -201,6 +215,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjV-xE-cwR">
+                                <rect key="frame" x="77" y="423" width="220" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="btnRegister:" destination="Qyb-kf-mdW" eventType="touchUpInside" id="gKo-Il-0wu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -210,10 +232,13 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Urv-ts-uMU"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Passcode" id="xY8-Qf-q6O"/>
+                    <connections>
+                        <outlet property="txtPass" destination="Hk8-4b-lpw" id="WfY-5o-897"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQm-nH-hGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="542"/>
+            <point key="canvasLocation" x="2356" y="541.97901049475263"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="unc-1h-JOl">
